@@ -8,7 +8,7 @@
       输入城市/景点/游玩主题
     </div>
     <router-link tag="div" to="/city" class="header-right">
-      北京
+      {{this.$store.state.city}}
       <span class="iconfont">&#xe64a;</span>
     </router-link>
   </div>

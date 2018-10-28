@@ -17,7 +17,8 @@ export default {
   data () {
     return {
       touchStatus: false,
-      startY: 0
+      startY: 0,
+      timer: null
     }
   },
   computed: {
@@ -40,11 +41,16 @@ export default {
       this.touchStatus = true
     },
     handleTouchMove (e) {
-      const touchY = e.touches[0].clientY - 79
-      const index = Math.floor((touchY - this.startY) / 20)
-      if (index >= 0 && index < this.letters.length) {
-        this.$emit('letterChange', this.letters[index])
+      if (this.timer) {
+        this.timer = null
       }
+      this.timer = setTimeout(() => {
+        const touchY = e.touches[0].clientY - 79
+        const index = Math.floor((touchY - this.startY) / 20)
+        if (index >= 0 && index < this.letters.length) {
+          this.$emit('letterChange', this.letters[index])
+        }
+      }, 60)
     },
     handleTouchEnd () {
       this.touchStatus = false
