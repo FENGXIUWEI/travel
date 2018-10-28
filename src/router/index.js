@@ -2,9 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/page/home/Home'
 import City from '@/page/city/City'
-import '@/assets/reset.css'
-import '@/assets/border.css'
-import '@/assets/iconfont/iconfont.css'
+
 Vue.use(Router)
 
 export default new Router({
