@@ -5,7 +5,7 @@
       <div class="banner-info">
         <div class="banner-tittle">{{sightName}}</div>
         <div class="banner-number">
-          <span class="iconfont banner-icon">&#xe604;</span>
+          <span class="iconfont banner-icon">&#xe63e;</span>
           {{numberText}}
         </div>
       </div>

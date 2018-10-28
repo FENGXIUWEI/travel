@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import '../../../assets/varibles.styl'
+  @import '~styles/varibles.styl'
   .border-topbottom
     &:before
       border-color: #ccc

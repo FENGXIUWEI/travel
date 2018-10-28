@@ -1,7 +1,7 @@
 <template>
   <div class="icons">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="(page, index) of pages" :key="index">
+      <swiper-slide v-for="(page, index) of pages"  :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
             <img :src="item.imgUrl" class="icon-img-content"/>
@@ -28,8 +28,7 @@ export default {
   data () {
     return {
       swiperOption: {
-        pagination: '.swiper-pagination',
-        loop: true
+        pagination: '.swiper-pagination'
       }
     }
   },
@@ -43,6 +42,7 @@ export default {
         }
         pages[page].push(item)
       })
+      console.log(pages)
       return pages
     }
   }
