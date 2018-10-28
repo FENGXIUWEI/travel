@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     handleCity (e) {
-      this.$store.state.city = e.target.innerText
+      this.$store.dispatch('changeCity', e.target.innerText)
       this.$router.push('/')
     }
   },
